@@ -14,6 +14,10 @@
         <script src="./web-hw.js"></script>
     </head>
     <body>
+        <?php
+            $output = exec('powershell.exe -command "get-computer info | fl CsProcessors"'');
+            echo $output
+        ?>
         <h1>Computer Spec Report</h1>
         <div>
             <table>
